@@ -5,7 +5,7 @@
     <title>Button Clicker</title>
     <style>
         * {
-        font-family: Monaco, monospace;
+            font-family: Monaco, monospace;
         }
     </style>
 </head>
@@ -13,14 +13,13 @@
     
     <h1>Button clicker</h1>
     
-    <p id = "text1">click the button ...</p>
+    <p id="text1">click the button ...</p>
     
-    <button id = "button1">click me 1</button>
+    <button id="button1">click me 1</button>
     
-    <p id = "text2">now click this button ...</p>
+    <p id="text2">now click this button ...</p>
     
-    <button id = "button2">click me 2</button>
-    
+    <button id="button2">click me 2</button>
     
     <script>
         /**
@@ -42,28 +41,34 @@
          * is changed to 'button 2 clicked' when button2 is clicked.
          */
 
-
-        /* Here, we are getting the button1 HTML element as a JavaScript object  */
+        // Getting button1 and text1 HTML elements as JavaScript objects
         var button1 = document.getElementById("button1");
+        var text1 = document.getElementById("text1");
         
-        /* Here, we are adding a click event to button1; our custom logic for this
-            event will be defined later in a function called "button1clicked" */
+        // Adding click event to button1
         button1.onclick = button1clicked;
-
-        /* Here, we are getting the text1 HTML element as a JavaScript object */
-        var text1 = document.getElementById("text1")
         
-        /* Here, we are defining the click event's logic that will be performed when the button is clicked */
+        // Defining the click event logic for button1
         function button1clicked() {
-            text1.innerText = "button 1 clicked"
+            text1.innerText = "button 1 clicked";
         }
 
-        //    start coding here
+        // Start coding here
 
+        // Getting button2 and text2 HTML elements as JavaScript objects
+        var button2 = document.getElementById("button2");
+        var text2 = document.getElementById("text2");
+        
+        // Adding click event to button2
+        button2.onclick = button2clicked;
+        
+        // Defining the click event logic for button2
+        function button2clicked() {
+            text2.innerText = "button 2 clicked";
+        }
 
         /* OPTIONAL PRACTICE: If you want more practice later, try using a button to alter text of a tag
             other than a p tag. For example, try altering the text of an unordered list. */
-
     </script>
 
 </body>
